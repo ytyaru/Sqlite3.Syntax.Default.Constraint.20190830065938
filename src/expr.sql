@@ -1,0 +1,20 @@
+create table A(A text default (1+1));
+create table B(A text default (random()));
+create table C(A text default (cast(random() as text)));
+create table D(A text default (1 collate binary));
+create table E(A text default (1 not like 2));
+create table F(A text default (1 not glob 2));
+create table G(A text default (1 not regexp 2));
+create table H(A text default (1 not match 2));
+create table I(A text default (1 isnull));
+create table J(A text default (1 notnull));
+create table K(A text default (1 not null));
+create table L(A text default (1 is null));
+create table M(A text default (1 is not null));
+create table N(A text default (4 not between 0 and 3));
+create table O(A text default (4 not in (1,2,3)));
+create table P(A text default (4 not in (select 1,2,3)));
+create table Q(A text default (not exists (select 1,2,3)));
+create table R(A text default ((select 1,2,3)));
+create table S(A text default (case 1 when 1 then 1 else 2 end));
+
